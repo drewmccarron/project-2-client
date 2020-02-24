@@ -18,7 +18,7 @@ const onIndexLoadoutsSuccess = function (response) {
   messageFunctions.greenMessage('Successfully indexed your loadouts')
   console.log(response)
   const showLoadoutsHtml = showLoadoutsTemplate({ loadouts: response.loadouts })
-  $('.content').html(showLoadoutsHtml)
+  $('.loadout-list').html(showLoadoutsHtml)
 }
 
 const onIndexLoadoutsFailure = function (response) {

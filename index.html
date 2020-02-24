@@ -15,8 +15,6 @@
 
       <h1 id='message'>(Messages go here)</h1>
 
-      <h2>Users</h2>
-
       <form class="sign-in" id='sign-in'>
         <h3>Sign In</h3>
         <fieldset>
@@ -30,10 +28,10 @@
       <form class='sign-up' id='sign-up'>
         <h3>Sign Up</h3>
         <fieldset>
-            <input type="email" name='credentials[email]' placeholder="example@example.com">
-            <input type='password' name='credentials[password]' placeholder='Password'>
-            <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password'>
-            <input class='btn btn-primary' type='submit' value='Submit'>
+          <input type="email" name='credentials[email]' placeholder="example@example.com">
+          <input type='password' name='credentials[password]' placeholder='Password'>
+          <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password'>
+          <input class='btn btn-primary' type='submit' value='Submit'>
         </fieldset>
       </form>
 
@@ -47,8 +45,6 @@
         </fieldset>
       </form>
 
-
-
       <form class='sign-out hidden' id='sign-out'>
         <h3>Sign Out</h3>
         <fieldset>
@@ -56,57 +52,51 @@
         </fieldset>
       </form>
 
-      <h2>Loadouts</h2>
-
       <form class='create-loadout hidden' id='create-loadout'>
         <h3>Create Loadout</h3>
         <fieldset>
-            <input type='text' name='loadout[loadout_name]' placeholder='Loadout Name'>
-            <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
-            <input type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
-            <input type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
-            <input class='btn btn-primary' type='submit' value='Submit'>
+          <input type='text' name='loadout[loadout_name]' placeholder='Loadout Name'>
+          <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
+          <input type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
+          <input type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
+          <input class='btn btn-primary' type='submit' value='Submit'>
         </fieldset>
       </form>
-
 
       <form class='index-loadouts hidden' id='index-loadouts'>
         <h3>Index Loadouts</h3>
         <fieldset>
-            <input class='btn btn-primary' type='submit' value='Index'>
+          <input class='btn btn-primary' type='submit' value='Index'>
         </fieldset>
       </form>
-
 
       <form class='show-loadout hidden' id='show-loadout'>
         <h3>Show Loadout</h3>
         <fieldset>
-            <input type='number' name='loadout[id]' placeholder='ID#'>
-            <input class='btn btn-primary' type='submit' value='Show'>
+          <input type='number' name='loadout[id]' placeholder='ID#'>
+          <input class='btn btn-primary' type='submit' value='Show'>
         </fieldset>
       </form>
-
 
       <form class='update-loadout hidden' id='update-loadout'>
         <h3>Update Loadout</h3>
         <fieldset>
-            <input type='number' name='loadout[id]' placeholder='ID#'>
-            <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
-            <input type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
-            <input type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
-            <input class='btn btn-primary' type='submit' value='Submit'>
+          <input type='number' name='loadout[id]' placeholder='ID#'>
+          <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
+          <input type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
+          <input type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
+          <input class='btn btn-primary' type='submit' value='Submit'>
         </fieldset>
       </form>
-
 
       <form class='delete-loadout hidden' id='delete-loadout'>
         <h3>Delete Loadout</h3>
         <fieldset>
-            <input type='number' name='loadout[id]' placeholder='ID#'>
-            <input class='btn btn-primary' type='submit' value='Delete Loadout'>
+          <input type='number' name='loadout[id]' placeholder='ID#'>
+          <input class='btn btn-primary' type='submit' value='Delete Loadout'>
         </fieldset>
       </form>
 
-      <div id="content" class="content"></div>
+      <div id="loadout-list" class=" hidden loadout-list col-9 md"></div>
     </body>
 </html>

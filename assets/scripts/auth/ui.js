@@ -27,6 +27,7 @@ const onSignInSuccess = function (response) {
   $('.show-loadout').removeClass('hidden')
   $('.update-loadout').removeClass('hidden')
   $('.delete-loadout').removeClass('hidden')
+  $('.loadout-list').removeClass('hidden')
 }
 
 const onSignInFailure = function (response) {
@@ -45,6 +46,8 @@ const onSignOutSuccess = function (response) {
   store.user = undefined
   messageFunctions.greenMessage('Signed out successfully')
 
+  $('#change-password').trigger('reset')
+
   $('.sign-in').removeClass('hidden')
   $('.sign-up').removeClass('hidden')
   $('.change-password').addClass('hidden')
@@ -54,7 +57,7 @@ const onSignOutSuccess = function (response) {
   $('.show-loadout').addClass('hidden')
   $('.update-loadout').addClass('hidden')
   $('.delete-loadout').addClass('hidden')
-  $('#change-password').trigger('reset')
+  $('.loadout-list').addClass('hidden')
 }
 
 const onSignOutFailure = function (response) {

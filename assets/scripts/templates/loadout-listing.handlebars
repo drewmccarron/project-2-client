@@ -1,23 +1,22 @@
 {{#each loadouts as |loadout|}}
   {{log loadout}}
-  <section data-id="{{loadout.id}}">
-    <h4>Loadout Name</h4>
+  <section data-id="{{loadout.id}}" class="loadout-block col-3 md">
+    <h5>Name</h5>
     <p>
       {{loadout.loadout_name}}
     </p>
-    <h5>Armor</h6>
+    <h6>Armor</h6>
     <p>
       {{loadout.armor_slot}}
     </p>
-    <h5>Weapon</h6>
+    <h6>Weapon</h6>
     <p>
       {{loadout.weapon_slot}}
     </p>
-    <h5>Trinket</h6>
+    <h6>Trinket</h6>
     <p>
       {{loadout.trinket_slot}}
     </p>
-
   </section>
 
 {{/each}}
