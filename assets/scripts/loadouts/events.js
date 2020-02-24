@@ -11,7 +11,7 @@ const onCreateLoadout = function (event) {
   console.log(data)
 
   api.createLoadout(data)
-    .then(ui.onCreateLoadoutSuccess)
+    .then(() => onIndexLoadouts(event))
     .catch(ui.onCreateLoadoutFailure)
 }
 
