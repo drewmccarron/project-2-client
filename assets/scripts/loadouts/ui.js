@@ -42,6 +42,16 @@ const onDeleteLoadoutFailure = function (response) {
   console.log(response)
 }
 
+const onShowLoadoutSuccess = function (response) {
+  $('#message').text('Successfully showed loadout')
+  console.log(response)
+}
+
+const onShowLoadoutFailure = function (response) {
+  $('#message').text('Failed to show loadout')
+  console.log(response)
+}
+
 module.exports = {
   onCreateLoadoutSuccess,
   onCreateLoadoutFailure,
@@ -50,5 +60,7 @@ module.exports = {
   onUpdateLoadoutSuccess,
   onUpdateLoadoutFailure,
   onDeleteLoadoutSuccess,
-  onDeleteLoadoutFailure
+  onDeleteLoadoutFailure,
+  onShowLoadoutSuccess,
+  onShowLoadoutFailure
 }
