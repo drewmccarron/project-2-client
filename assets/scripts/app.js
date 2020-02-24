@@ -21,5 +21,5 @@ $(() => {
   $('#index-loadouts').on('submit', loadoutEvents.onIndexLoadouts)
   $('#show-loadout').on('submit', loadoutEvents.onShowLoadout)
   $('#update-loadout').on('submit', loadoutEvents.onUpdateLoadout)
-  $('#delete-loadout').on('submit', loadoutEvents.onDeleteLoadout)
+  $('#loadout-list').on('click', '.delete-loadout', loadoutEvents.onDeleteLoadout)
 })

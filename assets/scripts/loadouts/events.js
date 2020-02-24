@@ -39,12 +39,11 @@ const onUpdateLoadout = function (event) {
 
 const onDeleteLoadout = function (event) {
   event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
-  console.log(data)
+  const loadoutId = $(event.target).closest('section').data('id')
+  console.log(loadoutId)
 
-  api.deleteLoadout(data)
-    .then(ui.onDeleteLoadoutSuccess)
+  api.deleteLoadout(loadoutId)
+    .then(() => onIndexLoadouts(event))
     .catch(ui.onDeleteLoadoutFailure)
 }
 

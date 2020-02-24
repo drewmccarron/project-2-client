@@ -35,9 +35,9 @@ const updateLoadout = function (data) {
   })
 }
 
-const deleteLoadout = function (data) {
+const deleteLoadout = function (idNumber) {
   return $.ajax({
-    url: config.apiUrl + '/loadouts/' + data.loadout.id,
+    url: config.apiUrl + '/loadouts/' + idNumber,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
