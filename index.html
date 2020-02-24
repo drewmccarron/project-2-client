@@ -15,6 +15,7 @@
 
       <h1 id='message'>(Messages go here)</h1>
 
+      <h2>Users</h2>
       <h3>Sign In</h3>
       <form class="sign-in" id='sign-in'>
         <fieldset>
@@ -51,8 +52,21 @@
         </fieldset>
       </form>
 
-      <h1>Users:</h1>
+      <h2>Loadouts</h2>
+      <form class='create-loadout' id='create-loadout'>
+        <fieldset>
+            <input type='text' name='loadout[loadout_name]' placeholder='Loadout Name'>
+            <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
+            <input type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
+            <input type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
+            <input class='btn btn-primary' type='submit' value='Submit'>
+        </fieldset>
+      </form>
 
-      <h1>Loadouts:</h1>
+      <form class='index-loadouts' id='index-loadouts'>
+        <fieldset>
+            <input class='btn btn-primary' type='submit' value='Index'>
+        </fieldset>
+      </form>
     </body>
 </html>

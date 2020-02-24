@@ -1,0 +1,30 @@
+'use strict'
+
+const config = require('./../config')
+const store = require('./../store')
+
+const createLoadout = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/loadouts',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
+const indexLoadouts = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/loadouts',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+module.exports = {
+  createLoadout,
+  indexLoadouts
+}
