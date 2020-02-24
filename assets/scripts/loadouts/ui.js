@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('./../store')
+const showLoadoutsTemplate = require('../templates/loadout-listing.handlebars')
 
 const onCreateLoadoutSuccess = function (response) {
   $('#message').text('You successfully created a loadout')
@@ -15,6 +16,8 @@ const onCreateLoadoutFailure = function (response) {
 const onIndexLoadoutsSuccess = function (response) {
   $('#message').text('Successfully indexed your loadouts')
   console.log(response)
+  const showLoadoutsHtml = showLoadoutsTemplate({ loadouts: response.loadouts })
+  $('.content').html(showLoadoutsHtml)
 }
 
 const onIndexLoadoutsFailure = function (response) {
