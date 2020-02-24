@@ -1,57 +1,58 @@
 'use strict'
 
 const store = require('./../store')
+const messageFunctions = require('./../message-functions')
 const showLoadoutsTemplate = require('../templates/loadout-listing.handlebars')
 
 const onCreateLoadoutSuccess = function (response) {
-  $('#message').text('You successfully created a loadout')
+  messageFunctions.greenMessage('You successfully created a loadout')
   console.log(response)
 }
 
 const onCreateLoadoutFailure = function (response) {
-  $('#message').text('Failed to create loadout')
+  messageFunctions.redMessage('Failed to create loadout')
   console.log(response)
 }
 
 const onIndexLoadoutsSuccess = function (response) {
-  $('#message').text('Successfully indexed your loadouts')
+  messageFunctions.greenMessage('Successfully indexed your loadouts')
   console.log(response)
   const showLoadoutsHtml = showLoadoutsTemplate({ loadouts: response.loadouts })
   $('.content').html(showLoadoutsHtml)
 }
 
 const onIndexLoadoutsFailure = function (response) {
-  $('#message').text('Failed to index loadouts')
+  messageFunctions.redMessage('Failed to index loadouts')
   console.log(response)
 }
 
 const onUpdateLoadoutSuccess = function (response) {
-  $('#message').text('Successfully updated loadout')
+  messageFunctions.greenMessage('Successfully updated loadout')
   console.log(response)
 }
 
 const onUpdateLoadoutFailure = function (response) {
-  $('#message').text('Failed to update loadout')
+  messageFunctions.redMessage('Failed to update loadout')
   console.log(response)
 }
 
 const onDeleteLoadoutSuccess = function (response) {
-  $('#message').text('Successfully deleted loadout')
+  messageFunctions.greenMessage('Successfully deleted loadout')
   console.log(response)
 }
 
 const onDeleteLoadoutFailure = function (response) {
-  $('#message').text('Failed to delete loadout')
+  messageFunctions.redMessage('Failed to delete loadout')
   console.log(response)
 }
 
 const onShowLoadoutSuccess = function (response) {
-  $('#message').text('Successfully showed loadout')
+  messageFunctions.greenMessage('Successfully showed loadout')
   console.log(response)
 }
 
 const onShowLoadoutFailure = function (response) {
-  $('#message').text('Failed to show loadout')
+  messageFunctions.redMessage('Failed to show loadout')
   console.log(response)
 }
 

@@ -16,8 +16,9 @@
       <h1 id='message'>(Messages go here)</h1>
 
       <h2>Users</h2>
-      <h3>Sign In</h3>
+
       <form class="sign-in" id='sign-in'>
+        <h3>Sign In</h3>
         <fieldset>
           <input type="email" name='credentials[email]' placeholder="example@example.com">
           <input type='password' name='credentials[password]' placeholder='Password'>
@@ -25,8 +26,9 @@
         </fieldset>
       </form>
 
-      <h3>Sign Up</h3>
+
       <form class='sign-up' id='sign-up'>
+        <h3>Sign Up</h3>
         <fieldset>
             <input type="email" name='credentials[email]' placeholder="example@example.com">
             <input type='password' name='credentials[password]' placeholder='Password'>
@@ -35,8 +37,9 @@
         </fieldset>
       </form>
 
-      <h3>Change Password</h3>
-      <form class='change-password' id='change-password'>
+
+      <form class='change-password hidden' id='change-password'>
+        <h3>Change Password</h3>
         <fieldset>
           <input type='password' name='passwords[old]' placeholder='Old Password'>
           <input type='password' name='passwords[new]' placeholder='New Password'>
@@ -45,16 +48,18 @@
       </form>
 
 
-      <h3>Sign Out</h3>
-      <form class='sign-out' id='sign-out'>
+
+      <form class='sign-out hidden' id='sign-out'>
+        <h3>Sign Out</h3>
         <fieldset>
           <input class='btn btn-primary' type='submit' value='Sign Out'>
         </fieldset>
       </form>
 
       <h2>Loadouts</h2>
-      <h3>Create Loadout</h3>
-      <form class='create-loadout' id='create-loadout'>
+
+      <form class='create-loadout hidden' id='create-loadout'>
+        <h3>Create Loadout</h3>
         <fieldset>
             <input type='text' name='loadout[loadout_name]' placeholder='Loadout Name'>
             <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
@@ -64,23 +69,26 @@
         </fieldset>
       </form>
 
-      <h3>Index Loadouts</h3>
-      <form class='index-loadouts' id='index-loadouts'>
+
+      <form class='index-loadouts hidden' id='index-loadouts'>
+        <h3>Index Loadouts</h3>
         <fieldset>
             <input class='btn btn-primary' type='submit' value='Index'>
         </fieldset>
       </form>
 
-      <h3>Show Loadout</h3>
-      <form class='show-loadout' id='show-loadout'>
+
+      <form class='show-loadout hidden' id='show-loadout'>
+        <h3>Show Loadout</h3>
         <fieldset>
             <input type='number' name='loadout[id]' placeholder='ID#'>
             <input class='btn btn-primary' type='submit' value='Show'>
         </fieldset>
       </form>
 
-      <h3>Update Loadout</h3>
-      <form class='update-loadout' id='update-loadout'>
+
+      <form class='update-loadout hidden' id='update-loadout'>
+        <h3>Update Loadout</h3>
         <fieldset>
             <input type='number' name='loadout[id]' placeholder='ID#'>
             <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
@@ -90,8 +98,9 @@
         </fieldset>
       </form>
 
-      <h3>Delete Loadout</h3>
-      <form class='delete-loadout' id='delete-loadout'>
+
+      <form class='delete-loadout hidden' id='delete-loadout'>
+        <h3>Delete Loadout</h3>
         <fieldset>
             <input type='number' name='loadout[id]' placeholder='ID#'>
             <input class='btn btn-primary' type='submit' value='Delete Loadout'>
