@@ -22,9 +22,21 @@ const onIndexLoadoutsFailure = function (response) {
   console.log(response)
 }
 
+const onUpdateLoadoutSuccess = function (response) {
+  $('#message').text('Successfully updated loadout')
+  console.log(response)
+}
+
+const onUpdateLoadoutFailure = function (response) {
+  $('#message').text('Failed to update loadout')
+  console.log(response)
+}
+
 module.exports = {
   onCreateLoadoutSuccess,
   onCreateLoadoutFailure,
   onIndexLoadoutsSuccess,
-  onIndexLoadoutsFailure
+  onIndexLoadoutsFailure,
+  onUpdateLoadoutSuccess,
+  onUpdateLoadoutFailure
 }

@@ -24,7 +24,19 @@ const indexLoadouts = function (data) {
   })
 }
 
+const updateLoadout = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/loadouts/' + data.loadout.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   createLoadout,
-  indexLoadouts
+  indexLoadouts,
+  updateLoadout
 }

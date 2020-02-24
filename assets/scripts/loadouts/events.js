@@ -26,7 +26,19 @@ const onIndexLoadouts = function (event) {
     .catch(ui.onIndexLoadoutsFailure)
 }
 
+const onUpdateLoadout = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(data)
+
+  api.updateLoadout(data)
+    .then(ui.onUpdateLoadoutSuccess)
+    .catch(ui.onUpdateLoadoutFailure)
+}
+
 module.exports = {
   onCreateLoadout,
-  onIndexLoadouts
+  onIndexLoadouts,
+  onUpdateLoadout
 }
