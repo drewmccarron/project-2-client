@@ -74,11 +74,18 @@
       <h3>Update Loadout</h3>
       <form class='update-loadout' id='update-loadout'>
         <fieldset>
-            <input type='number' name='loadout[id]' placeholder='ID#'>
             <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
             <input type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
             <input type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
             <input class='btn btn-primary' type='submit' value='Submit'>
+        </fieldset>
+      </form>
+
+      <h3>Delete Loadout</h3>
+      <form class='delete-loadout' id='delete-loadout'>
+        <fieldset>
+            <input type='number' name='loadout[id]' placeholder='ID#'>
+            <input class='btn btn-primary' type='submit' value='Delete Loadout'>
         </fieldset>
       </form>
     </body>

@@ -37,8 +37,20 @@ const onUpdateLoadout = function (event) {
     .catch(ui.onUpdateLoadoutFailure)
 }
 
+const onDeleteLoadout = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(data)
+
+  api.deleteLoadout(data)
+    .then(ui.onDeleteLoadoutSuccess)
+    .catch(ui.onDeleteLoadoutFailure)
+}
+
 module.exports = {
   onCreateLoadout,
   onIndexLoadouts,
-  onUpdateLoadout
+  onUpdateLoadout,
+  onDeleteLoadout
 }

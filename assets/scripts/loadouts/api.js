@@ -35,8 +35,19 @@ const updateLoadout = function (data) {
   })
 }
 
+const deleteLoadout = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/loadouts/' + data.loadout.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createLoadout,
   indexLoadouts,
-  updateLoadout
+  updateLoadout,
+  deleteLoadout
 }

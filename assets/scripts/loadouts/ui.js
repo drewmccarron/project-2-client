@@ -32,11 +32,23 @@ const onUpdateLoadoutFailure = function (response) {
   console.log(response)
 }
 
+const onDeleteLoadoutSuccess = function (response) {
+  $('#message').text('Successfully deleted loadout')
+  console.log(response)
+}
+
+const onDeleteLoadoutFailure = function (response) {
+  $('#message').text('Failed to delete loadout')
+  console.log(response)
+}
+
 module.exports = {
   onCreateLoadoutSuccess,
   onCreateLoadoutFailure,
   onIndexLoadoutsSuccess,
   onIndexLoadoutsFailure,
   onUpdateLoadoutSuccess,
-  onUpdateLoadoutFailure
+  onUpdateLoadoutFailure,
+  onDeleteLoadoutSuccess,
+  onDeleteLoadoutFailure
 }
