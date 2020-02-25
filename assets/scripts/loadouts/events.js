@@ -43,7 +43,7 @@ const onUpdateLoadout = function (event) {
 
 const onDeleteLoadout = function (event) {
   event.preventDefault()
-  const loadoutId = $(event.target).closest('section').data('id')
+  const loadoutId = $(event.target).closest('div').data('id')
   console.log(loadoutId)
 
   api.deleteLoadout(loadoutId)
@@ -53,7 +53,7 @@ const onDeleteLoadout = function (event) {
 
 const onShowLoadout = function (event) {
   event.preventDefault()
-  const loadoutId = $(event.target).closest('section').data('id')
+  const loadoutId = $(event.target).closest('div').data('id')
   console.log(loadoutId)
 
   api.showLoadout(loadoutId)

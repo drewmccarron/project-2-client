@@ -1,22 +1,15 @@
 {{#each loadouts as |loadout|}}
   {{log loadout}}
-  <section data-id="{{loadout.id}}" class="loadout-block col-3 md">
-    <h5>{{loadout.loadout_name}}</h5>
-    <h6>Armor</h6>
-    <p>
-      {{loadout.armor_slot}}
-    </p>
-    <h6>Weapon</h6>
-    <p>
-      {{loadout.weapon_slot}}
-    </p>
-    <h6>Trinket</h6>
-    <p>
-      {{loadout.trinket_slot}}
-    </p>
-
-    <button type="submit" class="btn btn-info show-loadout">Equip</button>
-    <button type="submit" class="btn btn-danger delete-loadout">Delete</button>
-  </section>
-
+    <div data-id="{{loadout.id}}" class="loadout-block col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{loadout.loadout_name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{loadout.armor_slot}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">{{loadout.weapon_slot}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">{{loadout.trinket_slot}}</h6>
+          <button type="submit" class="btn btn-info show-loadout">Equip</button>
+          <button type="submit" class="btn btn-danger delete-loadout">Delete</button>
+        </div>
+      </div>
+    </div>
 {{/each}}

@@ -1,25 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
 
-.loadout-list {
-  border: 1px solid;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.loadout-block {
-  border: 1px solid;
-
-  h5 {
-    margin-bottom: 0;
-  }
-  h6 {
-    margin-bottom: 0;
-  }
-  p {
-    margin-bottom: 0;
-  }
-}
-
 .maker-block {
   display: flex;
 }
