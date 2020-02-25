@@ -19,7 +19,7 @@ $(() => {
 $(() => {
   $('#create-loadout').on('submit', loadoutEvents.onCreateLoadout)
   $('#index-loadouts').on('submit', loadoutEvents.onIndexLoadouts)
+  $('.update-loadout').on('submit', loadoutEvents.onUpdateLoadout)
   $('#loadout-list').on('click', '.show-loadout', loadoutEvents.onShowLoadout)
-  $('#update-loadout').on('submit', loadoutEvents.onUpdateLoadout)
   $('#loadout-list').on('click', '.delete-loadout', loadoutEvents.onDeleteLoadout)
 })

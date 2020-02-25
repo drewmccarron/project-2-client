@@ -70,7 +70,7 @@
         </fieldset>
       </form>
 
-      <form class='update-loadout hidden' id='update-loadout'>
+      <!-- <form class='update-loadout hidden' id='update-loadout'>
         <h3>Update Loadout</h3>
         <fieldset>
           <input type='number' name='loadout[id]' placeholder='ID#'>
@@ -79,10 +79,10 @@
           <input type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
           <input class='btn btn-primary' type='submit' value='Submit'>
         </fieldset>
-      </form>
+      </form> -->
 
       <div class="character loadout-block col-3 md hidden" id="character">
-        <form>
+        <form class="update-loadout create-loadout">
           <p>Loadout Name:</p>
           <input id="character_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Loadout Name'>
           <p>Armor Name:</p>
@@ -91,7 +91,7 @@
           <input id="character_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Equipped Weapon'>
           <p>Trinket Name:</p>
           <input id="character_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Equipped Trinket'>
-          <input class='btn btn-primary' type='submit' value='Save as New'>
+          <!-- <input class='btn btn-primary' type='submit' value='Save as New'> -->
           <input class='btn btn-primary' type='submit' value='Update'>
         </form>
       </div>

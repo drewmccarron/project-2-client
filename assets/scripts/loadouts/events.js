@@ -33,7 +33,7 @@ const onUpdateLoadout = function (event) {
   console.log(data)
 
   api.updateLoadout(data)
-    .then(ui.onUpdateLoadoutSuccess)
+    .then(() => onIndexLoadouts(event))
     .catch(ui.onUpdateLoadoutFailure)
 }
 
