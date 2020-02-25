@@ -15,10 +15,11 @@ const onCreateLoadoutFailure = function (response) {
 }
 
 const onIndexLoadoutsSuccess = function (response) {
-  messageFunctions.greenMessage('Successfully indexed your loadouts')
+  messageFunctions.greenMessage('Successfully retrieved loadouts')
   console.log(response)
   const showLoadoutsHtml = showLoadoutsTemplate({ loadouts: response.loadouts })
   $('.loadout-list').html(showLoadoutsHtml)
+  $('.loadout-list').removeClass('hidden')
 }
 
 const onIndexLoadoutsFailure = function (response) {
@@ -47,7 +48,7 @@ const onDeleteLoadoutFailure = function (response) {
 }
 
 const onShowLoadoutSuccess = function (response) {
-  messageFunctions.greenMessage('Successfully showed loadout')
+  messageFunctions.greenMessage('Successfully equipped loadout')
   store.loadout = response.loadout
   console.log(response)
   $('#character_loadout_name').val(store.loadout.loadout_name)

@@ -69,7 +69,7 @@
       <div class="log-out">
         <form class='index-loadouts hidden' id='index-loadouts'>
           <fieldset>
-            <input class='btn btn-secondary' type='submit' value='Index'>
+            <input class='btn btn-primary' type='submit' value='Index'>
           </fieldset>
         </form>
 
@@ -80,13 +80,14 @@
         </form>
 
         <button class="btn btn-secondary change-password hidden" data-toggle="collapse" href="#change-password">Change Password</button>
-        <form class='collapse change-password hidden' id='change-password'>
-          <fieldset>
-            <input type='password' name='passwords[old]' placeholder='Old Password'>
-            <input type='password' name='passwords[new]' placeholder='New Password'>
-            <input class='btn btn-secondary' type='submit' value='Submit'>
-          </fieldset>
-        </form>
       </div>
+
+      <form class='collapse change-password hidden' id='change-password'>
+        <fieldset>
+          <input type='password' name='passwords[old]' placeholder='Old Password'>
+          <input type='password' name='passwords[new]' placeholder='New Password'>
+          <input class='btn btn-success' type='submit' value='Submit'>
+        </fieldset>
+      </form>
     </body>
 </html>

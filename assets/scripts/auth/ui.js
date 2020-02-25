@@ -16,6 +16,7 @@ const onSignInSuccess = function (response) {
   store.user = response.user
 
   $('#sign-in').trigger('reset')
+  $('#sign-up').trigger('reset')
 
   messageFunctions.greenMessage(response.user.email + ' successfully signed in')
 
@@ -28,10 +29,7 @@ const onSignInSuccess = function (response) {
   $('.show-loadout').removeClass('hidden')
   $('.update-loadout').removeClass('hidden')
   $('.delete-loadout').removeClass('hidden')
-  $('.loadout-list').removeClass('hidden')
   $('.character').removeClass('hidden')
-
-  $('#index-loadouts').submit()
 }
 
 const onSignInFailure = function (response) {

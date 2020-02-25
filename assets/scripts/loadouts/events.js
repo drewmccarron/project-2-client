@@ -1,6 +1,7 @@
 'use strict'
 
 const getFormFields = require('./../../../lib/get-form-fields')
+const store = require('./../store')
 const api = require('./api')
 const ui = require('./ui')
 
@@ -11,7 +12,7 @@ const onCreateLoadout = function (event) {
   console.log(data)
 
   api.createLoadout(data)
-    .then(() => onIndexLoadouts(event))
+    .then(ui.onCreateLoadoutSuccess)
     .catch(ui.onCreateLoadoutFailure)
 }
 
@@ -31,10 +32,13 @@ const onUpdateLoadout = function (event) {
   const form = event.target
   const data = getFormFields(form)
   console.log(data)
-
-  api.updateLoadout(data)
-    .then(() => onIndexLoadouts(event))
-    .catch(ui.onUpdateLoadoutFailure)
+  if (store.loadout === undefined) {
+    ui.onUpdateLoadoutFailure()
+  } else {
+    api.updateLoadout(data)
+      .then(ui.onUpdateLoadoutSuccess)
+      .catch(ui.onUpdateLoadoutFailure)
+  }
 }
 
 const onDeleteLoadout = function (event) {
@@ -43,7 +47,7 @@ const onDeleteLoadout = function (event) {
   console.log(loadoutId)
 
   api.deleteLoadout(loadoutId)
-    .then(() => onIndexLoadouts(event))
+    .then(ui.onDeleteLoadoutSuccess)
     .catch(ui.onDeleteLoadoutFailure)
 }
 
