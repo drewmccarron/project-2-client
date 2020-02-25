@@ -70,14 +70,6 @@
         </fieldset>
       </form>
 
-      <form class='show-loadout hidden' id='show-loadout'>
-        <h3>Show Loadout</h3>
-        <fieldset>
-          <input type='number' name='loadout[id]' placeholder='ID#'>
-          <input class='btn btn-primary' type='submit' value='Show'>
-        </fieldset>
-      </form>
-
       <form class='update-loadout hidden' id='update-loadout'>
         <h3>Update Loadout</h3>
         <fieldset>
@@ -88,6 +80,21 @@
           <input class='btn btn-primary' type='submit' value='Submit'>
         </fieldset>
       </form>
+
+      <div class="character loadout-block col-3 md hidden" id="character">
+        <form>
+          <p>Loadout Name:</p>
+          <input id="character_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Loadout Name'>
+          <p>Armor Name:</p>
+          <input id="character_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Equipped Armor'>
+          <p>Weapon Name:</p>
+          <input id="character_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Equipped Weapon'>
+          <p>Trinket Name:</p>
+          <input id="character_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Equipped Trinket'>
+          <input class='btn btn-primary' type='submit' value='Save as New'>
+          <input class='btn btn-primary' type='submit' value='Update'>
+        </form>
+      </div>
 
       <div id="loadout-list" class=" hidden loadout-list col-9 md"></div>
     </body>

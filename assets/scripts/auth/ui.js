@@ -28,6 +28,7 @@ const onSignInSuccess = function (response) {
   $('.update-loadout').removeClass('hidden')
   $('.delete-loadout').removeClass('hidden')
   $('.loadout-list').removeClass('hidden')
+  $('.character').removeClass('hidden')
 }
 
 const onSignInFailure = function (response) {
@@ -58,6 +59,7 @@ const onSignOutSuccess = function (response) {
   $('.update-loadout').addClass('hidden')
   $('.delete-loadout').addClass('hidden')
   $('.loadout-list').addClass('hidden')
+  $('.character').addClass('hidden')
 }
 
 const onSignOutFailure = function (response) {

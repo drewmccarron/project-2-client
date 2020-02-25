@@ -48,7 +48,12 @@ const onDeleteLoadoutFailure = function (response) {
 
 const onShowLoadoutSuccess = function (response) {
   messageFunctions.greenMessage('Successfully showed loadout')
+  store.loadout = response.loadout
   console.log(response)
+  $('#character_loadout_name').val(store.loadout.loadout_name)
+  $('#character_loadout_armor').val(store.loadout.armor_slot)
+  $('#character_loadout_weapon').val(store.loadout.weapon_slot)
+  $('#character_loadout_trinket').val(store.loadout.trinket_slot)
 }
 
 const onShowLoadoutFailure = function (response) {
