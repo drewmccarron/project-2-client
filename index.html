@@ -16,86 +16,77 @@
       <h1 id='message'>(Messages go here)</h1>
 
       <form class="sign-in" id='sign-in'>
-        <h3>Sign In</h3>
         <fieldset>
           <input type="email" name='credentials[email]' placeholder="example@example.com">
           <input type='password' name='credentials[password]' placeholder='Password'>
-          <input class='btn btn-primary' type='submit' value='Submit'>
+          <input class='btn btn-primary' type='submit' value='Sign In'>
         </fieldset>
       </form>
 
-
       <form class='sign-up' id='sign-up'>
-        <h3>Sign Up</h3>
         <fieldset>
           <input type="email" name='credentials[email]' placeholder="example@example.com">
           <input type='password' name='credentials[password]' placeholder='Password'>
           <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password'>
-          <input class='btn btn-primary' type='submit' value='Submit'>
+          <input class='btn btn-primary' type='submit' value='Sign Up'>
         </fieldset>
       </form>
 
+      <div class='maker-block'>
+        <div class="character loadout-block col-3 md hidden">
+          <h4>New Loadout:</h4>
+          <form class='create-loadout hidden' id='create-loadout'>
+            <p>Loadout Name:</p>
+            <input id="new_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
+            <p>Armor Name:</p>
+            <input id="new_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Armor Set'>
+            <p>Weapon Name:</p>
+            <input id="new_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
+            <p>Trinket Name:</p>
+            <input id="new_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
+            <input class='btn btn-success' type='submit' value='Save as New'>
+          </form>
+        </div>
 
-      <form class='change-password hidden' id='change-password'>
-        <h3>Change Password</h3>
-        <fieldset>
-          <input type='password' name='passwords[old]' placeholder='Old Password'>
-          <input type='password' name='passwords[new]' placeholder='New Password'>
-          <input class='btn btn-primary' type='submit' value='Submit'>
-        </fieldset>
-      </form>
-
-      <form class='sign-out hidden' id='sign-out'>
-        <h3>Sign Out</h3>
-        <fieldset>
-          <input class='btn btn-primary' type='submit' value='Sign Out'>
-        </fieldset>
-      </form>
-
-      <form class='create-loadout hidden' id='create-loadout'>
-        <h3>Create Loadout</h3>
-        <fieldset>
-          <input type='text' name='loadout[loadout_name]' placeholder='Loadout Name'>
-          <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
-          <input type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
-          <input type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
-          <input class='btn btn-primary' type='submit' value='Submit'>
-        </fieldset>
-      </form>
-
-      <form class='index-loadouts hidden' id='index-loadouts'>
-        <h3>Index Loadouts</h3>
-        <fieldset>
-          <input class='btn btn-primary' type='submit' value='Index'>
-        </fieldset>
-      </form>
-
-      <!-- <form class='update-loadout hidden' id='update-loadout'>
-        <h3>Update Loadout</h3>
-        <fieldset>
-          <input type='number' name='loadout[id]' placeholder='ID#'>
-          <input type='text' name='loadout[armor_slot]' placeholder='Armor'>
-          <input type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
-          <input type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
-          <input class='btn btn-primary' type='submit' value='Submit'>
-        </fieldset>
-      </form> -->
-
-      <div class="character loadout-block col-3 md hidden" id="character">
-        <form class="update-loadout create-loadout">
-          <p>Loadout Name:</p>
-          <input id="character_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Loadout Name'>
-          <p>Armor Name:</p>
-          <input id="character_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Equipped Armor'>
-          <p>Weapon Name:</p>
-          <input id="character_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Equipped Weapon'>
-          <p>Trinket Name:</p>
-          <input id="character_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Equipped Trinket'>
-          <!-- <input class='btn btn-primary' type='submit' value='Save as New'> -->
-          <input class='btn btn-primary' type='submit' value='Update'>
-        </form>
+        <div class="character loadout-block col-3 md hidden">
+          <h4>Equipped</h4>
+          <form class="update-loadout">
+            <p>Loadout Name:</p>
+            <input id="character_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
+            <p>Armor Name:</p>
+            <input id="character_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Equipped Armor'>
+            <p>Weapon Name:</p>
+            <input id="character_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Equipped Weapon'>
+            <p>Trinket Name:</p>
+            <input id="character_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Equipped Trinket'>
+            <input class='btn btn-info' type='submit' value='Update'>
+          </form>
+        </div>
       </div>
 
       <div id="loadout-list" class=" hidden loadout-list col-9 md"></div>
+
+      <div class="log-out">
+        <form class='index-loadouts hidden' id='index-loadouts'>
+          <fieldset>
+            <input class='btn btn-secondary' type='submit' value='Index'>
+          </fieldset>
+        </form>
+
+        <form class='sign-out hidden' id='sign-out'>
+          <fieldset>
+            <input class='btn btn-secondary' type='submit' value='Sign Out'>
+          </fieldset>
+        </form>
+
+        <button class="btn btn-secondary change-password hidden" data-toggle="collapse" href="#change-password">Change Password</button>
+        <form class='collapse change-password hidden' id='change-password'>
+          <fieldset>
+            <input type='password' name='passwords[old]' placeholder='Old Password'>
+            <input type='password' name='passwords[new]' placeholder='New Password'>
+            <input class='btn btn-secondary' type='submit' value='Submit'>
+          </fieldset>
+        </form>
+      </div>
     </body>
 </html>

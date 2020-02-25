@@ -20,6 +20,18 @@
   }
 }
 
+.maker-block {
+  display: flex;
+}
+
+.log-out {
+  display: flex;
+}
+
 .hidden {
   display: none;
+}
+
+#message {
+  text-align: center;
 }
