@@ -49,6 +49,8 @@ const onSignOutSuccess = function (response) {
   messageFunctions.greenMessage('Signed out successfully')
 
   $('#change-password').trigger('reset')
+  $('#create-loadout').trigger('reset')
+  $('#update-loadout').trigger('reset')
 
   $('.sign-in').removeClass('hidden')
   $('.sign-up').removeClass('hidden')

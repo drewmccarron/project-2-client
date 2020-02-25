@@ -1,8 +1,8 @@
 {{#each loadouts as |loadout|}}
   {{log loadout}}
-    <div data-id="{{loadout.id}}" class="loadout-block col-sm-3">
+    <div class="loadout-block col-sm-3">
       <div class="card">
-        <div class="card-body">
+        <div data-id="{{loadout.id}}" class="card-body">
           <h5 class="card-title">{{loadout.loadout_name}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{loadout.armor_slot}}</h6>
           <h6 class="card-subtitle mb-2 text-muted">{{loadout.weapon_slot}}</h6>

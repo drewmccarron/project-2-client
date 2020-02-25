@@ -1,11 +1,22 @@
 @import '~bootstrap/scss/bootstrap';
 
-.maker-block {
+.logged-in {
   display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.log-out {
+.logged-out {
   display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.maker-block {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
 .hidden {
@@ -13,5 +24,11 @@
 }
 
 #message {
+  padding-bottom: 15px;
+  padding-top: 15px;
   text-align: center;
+}
+
+.loadout-block {
+  padding: 5px;
 }

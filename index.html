@@ -16,7 +16,7 @@
     <h1 id='message'>Welcome.</h1>
 
     <div>
-      <div class="log-out">
+      <div class="logged-in">
         <form class='index-loadouts hidden' id='index-loadouts'>
           <fieldset>
             <input class='btn btn-primary' type='submit' value='Index'>
@@ -41,27 +41,27 @@
       </form>
     </div>
 
-    <div>
-      <form class="sign-in" id='sign-in'>
-        <fieldset>
-          <input type="email" name='credentials[email]' placeholder="example@example.com">
+      <div class='logged-out'>
+        <form class="sign-in col-3" id='sign-in'>
+          <fieldset  >
+          <input type="email" name='credentials[email]' placeholder="example@ex.com">
           <input type='password' name='credentials[password]' placeholder='Password'>
           <input class='btn btn-primary' type='submit' value='Sign In'>
-        </fieldset>
-      </form>
+          </fieldset>
+        </form>
 
-      <form class='sign-up' id='sign-up'>
-        <fieldset>
-          <input type="email" name='credentials[email]' placeholder="example@example.com">
+        <form class='sign-up col-3'   id='sign-up'>
+          <fieldset>
+          <input type="email" name='credentials[email]' placeholder="example@ex.com">
           <input type='password' name='credentials[password]' placeholder='Password'>
           <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password'>
           <input class='btn btn-primary' type='submit' value='Sign Up'>
-        </fieldset>
-      </form>
-    </div>
+          </fieldset>
+        </form>
+      </div>
 
       <div class='maker-block'>
-        <div class="character loadout-block col-3 md hidden">
+        <div class="character col-3 md hidden">
           <h4>New Loadout:</h4>
           <form class='create-loadout hidden' id='create-loadout'>
             <input id="new_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
@@ -72,7 +72,7 @@
           </form>
         </div>
 
-        <div class="character loadout-block col-3 md hidden">
+        <div class="character col-3 md hidden">
           <h4>Equipped</h4>
           <form class="update-loadout">
             <input id="character_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
