@@ -3,10 +3,30 @@
     <div class="loadout-block col-sm-3">
       <div class="card">
         <div data-id="{{loadout.id}}" class="card-body">
-          <h5 class="card-title">{{loadout.loadout_name}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{loadout.armor_slot}}</h6>
-          <h6 class="card-subtitle mb-2 text-muted">{{loadout.weapon_slot}}</h6>
-          <h6 class="card-subtitle mb-2 text-muted">{{loadout.trinket_slot}}</h6>
+          {{#if loadout.loadout_name}}
+            <h5 class="card-title">{{loadout.loadout_name}}</h5>
+          {{else}}
+            <h5>(Unnamed)</h5>
+          {{/if}}
+
+          {{#if loadout.armor_slot}}
+            <h6 class="card-title">{{loadout.armor_slot}}</h6>
+          {{else}}
+            <h6>(Unequipped)</h6>
+          {{/if}}
+
+          {{#if loadout.weapon_slot}}
+            <h6 class="card-title">{{loadout.weapon_slot}}</h6>
+          {{else}}
+            <h6>(Unequipped)</h6>
+          {{/if}}
+
+          {{#if loadout.trinket_slot}}
+            <h6 class="card-title">{{loadout.trinket_slot}}</h6>
+          {{else}}
+            <h6>(Unequipped)</h6>
+          {{/if}}
+
           <button type="submit" class="btn btn-info show-loadout">Equip</button>
           <button type="submit" class="btn btn-danger delete-loadout">Delete</button>
         </div>

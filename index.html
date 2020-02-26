@@ -29,16 +29,20 @@
           </fieldset>
         </form>
 
-        <button class="change-password btn btn-warning hidden" data-toggle="collapse" href="#change-password">Change Password</button>
-      </div>
+        <div class='password'>
+          <button class="change-password btn btn-warning hidden" data-toggle="collapse" href="#change-password">Change Password</button>
 
-      <form class='change-password collapse hidden' id='change-password'>
-        <fieldset>
-          <input type='password' name='passwords[old]' placeholder='Old Password'>
-          <input type='password' name='passwords[new]' placeholder='New Password'>
-          <input class='btn btn-warning' type='submit' value='Submit'>
-        </fieldset>
-      </form>
+          <form class='change-password collapse hidden' id='change-password'>
+            <fieldset>
+              <div class='password'>
+                <input type='password' name='passwords[old]' placeholder='Old Password'>
+                <input type='password' name='passwords[new]' placeholder='New Password'>
+                <input class='btn btn-warning' type='submit' value='Submit'>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
     </div>
 
       <div class='logged-out'>
@@ -74,7 +78,7 @@
 
         <div class="character col-2 md hidden">
           <h4>Equipped</h4>
-          <form class="update-loadout">
+          <form class="update-loadout" id='update-loadout'>
             <input id="character_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
             <input id="character_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Equipped Armor'>
             <input id="character_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Equipped Weapon'>

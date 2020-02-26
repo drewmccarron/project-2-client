@@ -7,6 +7,11 @@
   padding-bottom: 10px;
 }
 
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
 .logged-out {
   display: flex;
   justify-content: center;

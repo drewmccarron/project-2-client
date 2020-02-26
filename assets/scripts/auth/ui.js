@@ -5,6 +5,8 @@ const messageFunctions = require('./../message-functions')
 
 const onSignUpSuccess = function (response) {
   messageFunctions.greenMessage(response.user.email + ' successfully signed up')
+
+  $('#sign-in').trigger('reset')
   $('#sign-up').trigger('reset')
 }
 
