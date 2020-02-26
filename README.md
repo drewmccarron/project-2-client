@@ -50,12 +50,15 @@ API, I began using handlebars to convert that data into usable HTML. From here,
 development centered around app design and layout, where the app became more
 organized, intuitive, and visually appealing.
 
-
 ### Future Updates
 The next large update to the app would likely be adding a third database that
 would contain a list of pre-made items that users could equip, instead of
 typing in the names of their own items. This is intuitive and more in-line with
 how a similar video game inventory-equipment systems work.
+
+This would be implemented by replacing the text-inputs for the forms used to
+create and update loadouts with menus (such as drop-downs) that contain lists of
+items that can be selected for the respective equipment slots.
 
 ### Wireframe and ERD
 
