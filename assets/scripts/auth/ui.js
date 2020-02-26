@@ -6,8 +6,8 @@ const messageFunctions = require('./../message-functions')
 const onSignUpSuccess = function (response) {
   messageFunctions.greenMessage(response.user.email + ' successfully signed up')
 
-  $('#sign-in').trigger('reset')
-  $('#sign-up').trigger('reset')
+  $('.sign-in').trigger('reset')
+  $('.sign-up').trigger('reset')
 }
 
 const onSignUpFailure = function (response) {
@@ -17,8 +17,8 @@ const onSignUpFailure = function (response) {
 const onSignInSuccess = function (response) {
   store.user = response.user
 
-  $('#sign-in').trigger('reset')
-  $('#sign-up').trigger('reset')
+  $('.sign-in').trigger('reset')
+  $('.sign-up').trigger('reset')
 
   messageFunctions.greenMessage(response.user.email + ' successfully signed in')
 
@@ -50,9 +50,9 @@ const onSignOutSuccess = function (response) {
   store.user = undefined
   messageFunctions.greenMessage('Signed out successfully')
 
-  $('#change-password').trigger('reset')
-  $('#create-loadout').trigger('reset')
-  $('#update-loadout').trigger('reset')
+  $('.change-password').trigger('reset')
+  $('.create-loadout').trigger('reset')
+  $('.update-loadout').trigger('reset')
 
   $('.sign-in').removeClass('hidden')
   $('.sign-up').removeClass('hidden')
