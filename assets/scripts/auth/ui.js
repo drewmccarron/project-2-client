@@ -40,6 +40,7 @@ const onSignInFailure = function (response) {
 
 const onChangePasswordSuccess = function (response) {
   messageFunctions.greenMessage('You changed your password successfully')
+  $('.change-password').trigger('reset')
 }
 
 const onChangePasswordFailure = function (response) {

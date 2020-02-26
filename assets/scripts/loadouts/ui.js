@@ -6,6 +6,7 @@ const showLoadoutsTemplate = require('../templates/loadout-listing.handlebars')
 
 const onCreateLoadoutSuccess = function (response) {
   messageFunctions.greenMessage('You successfully created a loadout')
+  $('.create-loadout').trigger('reset')
 }
 
 const onCreateLoadoutFailure = function (response) {
