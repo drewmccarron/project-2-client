@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Armor Set</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,6 +11,7 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
 
     <h1 id='message'>Welcome.</h1>
@@ -45,50 +46,50 @@
       </div>
     </div>
 
-      <div class='logged-out'>
-        <form class="sign-in col-2" id='sign-in'>
-          <fieldset  >
+    <div class='logged-out'>
+      <form class="sign-in col-2" id='sign-in'>
+        <fieldset>
           <input type="email" name='credentials[email]' placeholder="example@ex.com">
           <input type='password' name='credentials[password]' placeholder='Password'>
           <input class='btn btn-primary' type='submit' value='Sign In'>
-          </fieldset>
-        </form>
+        </fieldset>
+      </form>
 
-        <form class='sign-up col-2'   id='sign-up'>
-          <fieldset>
+      <form class='sign-up col-2' id='sign-up'>
+        <fieldset>
           <input type="email" name='credentials[email]' placeholder="example@ex.com">
           <input type='password' name='credentials[password]' placeholder='Password'>
           <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password'>
           <input class='btn btn-primary' type='submit' value='Sign Up'>
-          </fieldset>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class='maker-block'>
+      <div class="character col-2 hidden">
+        <h4>New Loadout:</h4>
+        <form class='create-loadout hidden' id='create-loadout'>
+          <input id="new_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
+          <input id="new_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Armor Set'>
+          <input id="new_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
+          <input id="new_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
+          <input class='btn btn-success' type='submit' value='Save as New'>
         </form>
       </div>
 
-      <div class='maker-block'>
-        <div class="character col-2 md hidden">
-          <h4>New Loadout:</h4>
-          <form class='create-loadout hidden' id='create-loadout'>
-            <input id="new_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
-            <input id="new_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Armor Set'>
-            <input id="new_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
-            <input id="new_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
-            <input class='btn btn-success' type='submit' value='Save as New'>
-          </form>
-        </div>
-
-        <div class="character col-2 md hidden">
-          <h4>Equipped</h4>
-          <form class="update-loadout" id='update-loadout'>
-            <input id="character_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
-            <input id="character_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Equipped Armor'>
-            <input id="character_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Equipped Weapon'>
-            <input id="character_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Equipped Trinket'>
-            <input class='btn btn-info' type='submit' value='Update'>
-          </form>
-        </div>
+      <div class="character col-2 hidden">
+        <h4>Equipped</h4>
+        <form class="update-loadout" id='update-loadout'>
+          <input id="character_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
+          <input id="character_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Equipped Armor'>
+          <input id="character_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Equipped Weapon'>
+          <input id="character_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Equipped Trinket'>
+          <input class='btn btn-info' type='submit' value='Update'>
+        </form>
       </div>
+    </div>
 
-      <div id="loadout-list" class="hidden loadout-list row"></div>
+    <div id="loadout-list" class="loadout-list row hidden"></div>
 
     </body>
 </html>

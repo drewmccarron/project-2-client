@@ -9,7 +9,6 @@ const onCreateLoadout = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   api.createLoadout(data)
     .then(ui.onCreateLoadoutSuccess)
@@ -20,7 +19,6 @@ const onIndexLoadouts = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   api.indexLoadouts(data)
     .then(ui.onIndexLoadoutsSuccess)
@@ -31,7 +29,7 @@ const onUpdateLoadout = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
+
   if (store.loadout === undefined) {
     ui.onUpdateLoadoutFailure()
   } else {
@@ -44,7 +42,6 @@ const onUpdateLoadout = function (event) {
 const onDeleteLoadout = function (event) {
   event.preventDefault()
   const loadoutId = $(event.target).closest('div').data('id')
-  console.log(loadoutId)
 
   api.deleteLoadout(loadoutId)
     .then(ui.onDeleteLoadoutSuccess)
@@ -54,7 +51,6 @@ const onDeleteLoadout = function (event) {
 const onShowLoadout = function (event) {
   event.preventDefault()
   const loadoutId = $(event.target).closest('div').data('id')
-  console.log(loadoutId)
 
   api.showLoadout(loadoutId)
     .then(ui.onShowLoadoutSuccess)
