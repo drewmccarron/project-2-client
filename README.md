@@ -2,8 +2,18 @@
 
 This app uses JavaScript, Ruby on Rails, Heroku, jQuery, Handlbars, and Bootstrap.
 
-[The backend respository can be found here](https://github.com/drewmccarron/project-2-api)
+[The frontend respository can be found here.](https://github.com/drewmccarron/project-2-client)
 
+[The Heroku server can be found here.](https://radiant-sea-60360.herokuapp.com/)
+
+### What It Does
+This app is an equipment loadout management system, as would be seen in a
+video game. It allows a user to create, update, and maintain a list of loadouts
+made of pieces of gear stored in armor, weapon, and trinket slots.
+
+The backend is hosted on Heroku where users' information and their custom
+loadouts are saved. Users are then able to access these saved loadouts through
+the app, where users can interact with them.
 
 ### Planning
 The first planning step was determining what app the would ultimately do. For
