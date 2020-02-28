@@ -4,6 +4,16 @@ const store = require('./../store')
 const messageFunctions = require('./../message-functions')
 const showLoadoutsTemplate = require('../templates/loadout-listing.handlebars')
 
+const onActionSuccess = function (response) {
+  const showLoadoutsHtml = showLoadoutsTemplate({ loadouts: response.loadouts })
+  $('.loadout-list').html(showLoadoutsHtml)
+  $('.loadout-list').removeClass('hidden')
+}
+
+const onActionFailure = function (response) {
+  messageFunctions.redMessage('Failed to index loadouts')
+}
+
 const onCreateLoadoutSuccess = function (response) {
   messageFunctions.greenMessage('You successfully created a loadout')
   $('.create-loadout').trigger('reset')
@@ -14,10 +24,14 @@ const onCreateLoadoutFailure = function (response) {
 }
 
 const onIndexLoadoutsSuccess = function (response) {
-  messageFunctions.greenMessage('Successfully retrieved loadouts')
-  const showLoadoutsHtml = showLoadoutsTemplate({ loadouts: response.loadouts })
-  $('.loadout-list').html(showLoadoutsHtml)
-  $('.loadout-list').removeClass('hidden')
+  if (response.loadouts.length > 0) {
+    messageFunctions.greenMessage('Successfully retrieved loadouts')
+    const showLoadoutsHtml = showLoadoutsTemplate({ loadouts: response.loadouts })
+    $('.loadout-list').html(showLoadoutsHtml)
+    $('.loadout-list').removeClass('hidden')
+  } else {
+    messageFunctions.redMessage('Unable to retrieve loadouts. Save one below')
+  }
 }
 
 const onIndexLoadoutsFailure = function (response) {
@@ -25,6 +39,7 @@ const onIndexLoadoutsFailure = function (response) {
 }
 
 const onUpdateLoadoutSuccess = function (response) {
+  $('.update-loadout').trigger('reset')
   messageFunctions.greenMessage('Successfully updated loadout')
 }
 
@@ -63,5 +78,7 @@ module.exports = {
   onDeleteLoadoutSuccess,
   onDeleteLoadoutFailure,
   onShowLoadoutSuccess,
-  onShowLoadoutFailure
+  onShowLoadoutFailure,
+  onActionSuccess,
+  onActionFailure
 }

@@ -12,6 +12,7 @@ const onCreateLoadout = function (event) {
 
   api.createLoadout(data)
     .then(ui.onCreateLoadoutSuccess)
+    .then(() => onAction(event))
     .catch(ui.onCreateLoadoutFailure)
 }
 
@@ -25,6 +26,16 @@ const onIndexLoadouts = function (event) {
     .catch(ui.onIndexLoadoutsFailure)
 }
 
+const onAction = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.indexLoadouts(data)
+    .then(ui.onActionSuccess)
+    .catch(ui.onActionFailure)
+}
+
 const onUpdateLoadout = function (event) {
   event.preventDefault()
   const form = event.target
@@ -35,6 +46,7 @@ const onUpdateLoadout = function (event) {
   } else {
     api.updateLoadout(data)
       .then(ui.onUpdateLoadoutSuccess)
+      .then(() => onAction(event))
       .catch(ui.onUpdateLoadoutFailure)
   }
 }
@@ -45,6 +57,7 @@ const onDeleteLoadout = function (event) {
 
   api.deleteLoadout(loadoutId)
     .then(ui.onDeleteLoadoutSuccess)
+    .then(() => onAction(event))
     .catch(ui.onDeleteLoadoutFailure)
 }
 
@@ -54,6 +67,7 @@ const onShowLoadout = function (event) {
 
   api.showLoadout(loadoutId)
     .then(ui.onShowLoadoutSuccess)
+    .then(() => onAction(event))
     .catch(ui.onShowLoadoutFailure)
 }
 
