@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Armor Set</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+
+    <h1 id='message'>Welcome.</h1>
+
+    <div>
+      <div class="logged-in">
+        <form class='index-loadouts hidden' id='index-loadouts'>
+          <fieldset>
+            <input class='btn btn-primary' type='submit' value='Index'>
+          </fieldset>
+        </form>
+
+        <form class='sign-out hidden' id='sign-out'>
+          <fieldset>
+            <input class='btn btn-secondary' type='submit' value='Sign Out'>
+          </fieldset>
+        </form>
+
+        <div class='password'>
+          <button class="change-password btn btn-warning hidden" data-toggle="collapse" href="#change-password">Change Password</button>
+
+          <form class='change-password collapse hidden' id='change-password'>
+            <fieldset>
+              <div class='password'>
+                <input type='password' name='passwords[old]' placeholder='Old Password'>
+                <input type='password' name='passwords[new]' placeholder='New Password'>
+                <input class='btn btn-warning' type='submit' value='Submit'>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class='logged-out'>
+      <form class="sign-in col-2" id='sign-in'>
+        <fieldset>
+          <input type="email" name='credentials[email]' placeholder="example@ex.com">
+          <input type='password' name='credentials[password]' placeholder='Password'>
+          <input class='btn btn-primary' type='submit' value='Sign In'>
+        </fieldset>
+      </form>
+
+      <form class='sign-up col-2' id='sign-up'>
+        <fieldset>
+          <input type="email" name='credentials[email]' placeholder="example@ex.com">
+          <input type='password' name='credentials[password]' placeholder='Password'>
+          <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password'>
+          <input class='btn btn-primary' type='submit' value='Sign Up'>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class='maker-block'>
+      <div class="character col-2 hidden">
+        <h4>New Loadout:</h4>
+        <form class='create-loadout hidden' id='create-loadout'>
+          <input id="new_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
+          <input id="new_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Armor Set'>
+          <input id="new_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Weapon'>
+          <input id="new_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Trinket'>
+          <input class='btn btn-success' type='submit' value='Save as New'>
+        </form>
+      </div>
+
+      <div class="character col-2 hidden">
+        <h4>Equipped</h4>
+        <form class="update-loadout" id='update-loadout'>
+          <input id="character_loadout_name" type='text' name='loadout[loadout_name]' placeholder='Name'>
+          <input id="character_loadout_armor" type='text' name='loadout[armor_slot]' placeholder='Equipped Armor'>
+          <input id="character_loadout_weapon" type='text' name='loadout[weapon_slot]' placeholder='Equipped Weapon'>
+          <input id="character_loadout_trinket" type='text' name='loadout[trinket_slot]' placeholder='Equipped Trinket'>
+          <input class='btn btn-info' type='submit' value='Update'>
+        </form>
+      </div>
+    </div>
+
+    <div id="loadout-list" class="loadout-list row hidden"></div>
+
+    </body>
+</html>
